@@ -1,10 +1,12 @@
 const express = require('express')
 const app = express()
 require('./zoom')
+const webhookRouter = require('./webhook')
 
 const PORT = process.env.PORT || 3000
 
 app.use(express.json())
+app.use(webhookRouter)
 
 app.use((err, req, res, next) => {
     console.log(err, req.body);

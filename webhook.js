@@ -3,7 +3,11 @@ const crypto = require('crypto')
 
 const webhookRouter = Router()
 
-webhookRouter.post('/test', (req, res) => {
+webhookRouter.get('/', (req, res) => {
+    res.send('webhook route is live')
+})
+
+webhookRouter.post('/webhook-test', (req, res) => {
   let response = {}
 
   console.log(req.headers)
