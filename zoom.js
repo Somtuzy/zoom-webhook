@@ -54,4 +54,4 @@ async function fetchMeetings() {
   }
 }
 
-setInterval(fetchMeetings, 10000)
+setInterval(fetchMeetings, process.env.FETCH_TIME)

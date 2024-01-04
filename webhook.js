@@ -10,7 +10,7 @@ webhookRouter.get('/', (req, res) => {
 webhookRouter.post('/webhook-test', (req, res) => {
   let response = {}
 
-  console.log(req.headers)
+//   console.log(req.headers)
   console.log(req.body)
 
   // construct the message string
